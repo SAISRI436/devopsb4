@@ -1,4 +1,4 @@
-pipeline{
+/*pipeline{
     agent any
     stages{
         stage('stage1'){
@@ -9,6 +9,19 @@ pipeline{
         stage('stage2'){
             steps{
                 echo"Welocme to Jenkins pipeline"
+            }
+        }
+    }
+}*/
+
+pipeline{
+    agent none{
+        label 'java-agent-slave'
+    }
+    stages{
+        stage('first stage'){
+            steps{
+                echo("Execute this stage")
             }
         }
     }

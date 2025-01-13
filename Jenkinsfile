@@ -15,7 +15,7 @@
 }*/
 
 pipeline{
-    agent none{
+    agent{
         label 'java-agent-slave'
     }
     stages{
